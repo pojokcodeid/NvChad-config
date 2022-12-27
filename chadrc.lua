@@ -4,7 +4,7 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme_toggle = { "onedark", "one_light", "tokyonight" },
+  theme_toggle = { "tokyonight", "onedark" },
   theme = "tokyonight",
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -14,9 +14,7 @@ M.ui = {
 
 M.plugins = require "custom.plugins"
 
-
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
 
 return M
-
