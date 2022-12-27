@@ -80,6 +80,9 @@ return {
       require "custom.plugins.toggleterm"
     end
   },
+  ["CRAG666/code_runner.nvim"] = {
+    config = function() require "custom.plugins.coderunner" end,
+  },
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
 }
