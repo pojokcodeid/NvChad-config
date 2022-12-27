@@ -68,6 +68,12 @@ return {
       require "custom.plugins.cmp"
     end,
   },
+
+  ["folke/tokyonight.nvim"] = {
+    config = function ()
+      require  "custom.plugins.colorscheme"
+    end
+  },
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
 }
