@@ -70,18 +70,31 @@ return {
   },
 
   ["folke/tokyonight.nvim"] = {
-    config = function ()
-      require  "custom.plugins.colorscheme"
-    end
+    config = function()
+      require "custom.plugins.colorscheme"
+    end,
   },
 
-  ["akinsho/toggleterm.nvim"]={
-    config = function ()
+  ["akinsho/toggleterm.nvim"] = {
+    config = function()
       require "custom.plugins.toggleterm"
-    end
+    end,
   },
   ["CRAG666/code_runner.nvim"] = {
-    config = function() require "custom.plugins.coderunner" end,
+    config = function()
+      require "custom.plugins.coderunner"
+    end,
+  },
+  ["NvChad/ui"] = {
+    override_options = {
+      statusline = {
+        disable = true,
+        separator_style = "round",
+        -- overriden_modules = function()
+        --   return require "custom.plugins.lualine"
+        -- end,
+      },
+    },
   },
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
