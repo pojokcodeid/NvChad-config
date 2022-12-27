@@ -74,6 +74,12 @@ return {
       require  "custom.plugins.colorscheme"
     end
   },
+
+  ["akinsho/toggleterm.nvim"]={
+    config = function ()
+      require "custom.plugins.toggleterm"
+    end
+  },
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
 }
