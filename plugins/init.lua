@@ -89,7 +89,7 @@ return {
     override_options = {
       statusline = {
         disable = true,
-        separator_style = "round",
+        separator_style = "block", -- default/round/block/arrow
         -- overriden_modules = function()
         --   return require "custom.plugins.lualine"
         -- end,
