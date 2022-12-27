@@ -6,7 +6,7 @@ autocmd("VimResized", {
   command = "tabdo wincmd =",
 })
 
-require("custom.options")
+require "custom.options"
 
-local lpath = vim.fn.stdpath("config") .. "/lua/custom/my-snippets"
-vim.g.luasnippets_path= lpath
+local lpath = vim.fn.stdpath "config" .. "/lua/custom/my-snippets"
+vim.g.luasnippets_path = lpath

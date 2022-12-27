@@ -4,27 +4,36 @@ if not present then
   return
 end
 
-local b = null_ls.builtins
+-- local b = null_ls.builtins
+--
+-- local sources = {
+--
+--   -- webdev stuff
+--   b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
+--   -- b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
+--   b.formatting.prettier, -- so prettier works only on these filetypes
+--
+--   -- Lua
+--   b.formatting.stylua,
+--
+--   -- cpp
+--   b.formatting.clang_format,
+-- }
 
-local sources = {
-
-  -- webdev stuff
-  b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
-  -- b.formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
-  b.formatting.prettier, -- so prettier works only on these filetypes
-
-  -- Lua
-  b.formatting.stylua,
-
-  -- cpp
-  b.formatting.clang_format,
-}
+local formatting = null_ls.builtins.formatting
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup {
-  debug = true,
-  sources = sources,
+  debug = false,
+  -- sources = sources,
+  sources = {
+    formatting.prettier,
+    formatting.prettierd,
+    formatting.black.with { extra_args = { "--fast" } },
+    formatting.stylua,
+    formatting.eslint_d,
+  },
   on_attach = function(client, bufnr)
     --if client.resolved_capabilities.document_formatting then
     --vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.format{async=true}")
