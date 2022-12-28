@@ -25,6 +25,14 @@ return {
     override_options = overrides.nvimtree,
   },
 
+  -- ["akinsho/bufferline.nvim"] = {
+  --   tag = "v3.*",
+  --   requires = "nvim-tree/nvim-web-devicons",
+  --   config = function()
+  --     require "custom.plugins.bufferline"
+  --   end,
+  -- },
+
   -- Install a plugin
   ["max397574/better-escape.nvim"] = {
     event = "InsertEnter",
