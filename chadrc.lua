@@ -2,6 +2,7 @@ local M = {}
 
 -- Path to overriding theme and highlights files
 local highlights = require "custom.highlights"
+-- require("custom.lsp")
 
 M.ui = {
   theme_toggle = { "tokyonight", "onedark" },
