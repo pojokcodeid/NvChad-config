@@ -96,6 +96,7 @@ return {
       },
     },
   },
+  -- ["mfussenegger/nvim-jdtls"] = {},
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
 }
