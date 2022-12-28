@@ -104,6 +104,9 @@ M.nvimtree = {
       error = icons.diagnostics.BoldError,
     },
   },
+  view = {
+    hide_root_folder = false,
+  },
 }
 
 M.alpha = {
