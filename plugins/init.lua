@@ -135,4 +135,9 @@ return {
       require("todo-comments").setup()
     end,
   },
+  ["kyazdani42/nvim-web-devicons"] = {
+    config = function()
+      require "custom.plugins.wedevicon"
+    end,
+  },
 }
