@@ -126,7 +126,7 @@ return {
   },
   ["stevearc/dressing.nvim"] = {
     config = function()
-      require "lua.custom.plugins.dressing"
+      require "custom.plugins.dressing"
     end,
   },
   ["folke/todo-comments.nvim"] = {
