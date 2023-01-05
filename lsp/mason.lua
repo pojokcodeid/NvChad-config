@@ -9,6 +9,7 @@ local servers = {
   -- "yamlls",
   "jdtls",
   "emmet_ls",
+  "intelephense",
 }
 
 local settings = {
