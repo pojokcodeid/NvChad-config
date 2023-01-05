@@ -113,4 +113,26 @@ return {
   -- ["mfussenegger/nvim-jdtls"] = {},
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
+  -- plugins tambahan
+  ["rcarriga/nvim-notify"] = {
+    config = function()
+      vim.notify = require "notify"
+    end,
+  },
+  ["mrjones2014/smart-splits.nvim"] = {
+    config = function()
+      require "custom.plugins.smart-split"
+    end,
+  },
+  ["stevearc/dressing.nvim"] = {
+    config = function()
+      require "lua.custom.plugins.dressing"
+    end,
+  },
+  ["folke/todo-comments.nvim"] = {
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
 }
