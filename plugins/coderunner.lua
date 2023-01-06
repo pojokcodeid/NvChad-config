@@ -10,4 +10,11 @@ require("code_runner").setup {
     cpp = "g++ $fileName -o $fileNameWithoutExt && $dir/$fileNameWithoutExt",
     scss = "sass $dir/$fileName $dir/$fileNameWithoutExt.css",
   },
+  mode = "tab",
+  focus = true,
+  startinsert = true,
+  term = {
+    position = "vert",
+    size = 8,
+  },
 }
