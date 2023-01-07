@@ -25,7 +25,6 @@ local diagnostics = {
   "diagnostics",
   sources = { "nvim_diagnostic" },
   sections = { "error", "warn" },
-  -- symbols = { error = " ", warn = " " },
   symbols = {
     error = icons.diagnostics.BoldError .. " ",
     warn = icons.diagnostics.BoldWarning .. " ",
@@ -38,7 +37,6 @@ local diagnostics = {
 local diff = {
   "diff",
   colored = true,
-  -- symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
   symbols = {
     added = icons.git.LineAdded .. " ",
     modified = icons.git.LineModified .. " ",
@@ -83,7 +81,6 @@ local progress = function()
 end
 
 local spaces = function()
-  -- return "->| " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
   return icons.ui.Tab .. " " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
@@ -94,7 +91,6 @@ local file_name = {
 
 local lsp_info = {
   function()
-    --local msg = "No Active Lsp"
     local msg = ""
     local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
     local clients = vim.lsp.get_active_clients()
@@ -116,7 +112,6 @@ local lsp_info = {
     end
     return msg
   end,
-  --icon = " ",
   icon = icons.ui.Gear .. "",
 }
 
@@ -126,15 +121,13 @@ lualine.setup {
     theme = "auto",
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
-    disabled_filetypes = { "packer", "alpha", "dashboard", "NvimTree", "Outline", "DressingInput", "toggleterm" },
+    disabled_filetypes = { "packer", "alpha", "dashboard", "Outline", "DressingInput", "toggleterm" },
     always_divide_middle = true,
   },
   sections = {
     lualine_a = { branch },
     lualine_b = { mode },
     lualine_c = { diagnostics, lsp_info },
-    -- lualine_c = { file_name, lsp_info },
-    -- lualine_x = { "encoding", "fileformat", "filetype" },
     lualine_x = { diff, spaces, "encoding", filetype },
     lualine_y = { location },
     lualine_z = { progress },
