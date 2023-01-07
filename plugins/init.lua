@@ -110,6 +110,11 @@ return {
       },
     },
   },
+  ["nvim-lualine/lualine.nvim"] = {
+    config = function()
+      require "custom.plugins.lualine"
+    end,
+  },
   -- ["mfussenegger/nvim-jdtls"] = {},
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
