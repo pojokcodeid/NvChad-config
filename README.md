@@ -33,6 +33,8 @@ sudo apt-get install wget
 mkdir download
 cd download
 wget https://github.com/neovim/neovim/releases/download/v0.8.1/nvim-linux64.deb
+sudo apt-get install ./nvim-linux64.deb
+nvim --version
 ```
 
 - Check ketersediaan GCC
