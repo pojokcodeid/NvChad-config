@@ -46,7 +46,7 @@ git clone https://github.com/pojokcodeid/NvChad-config.git $HOME\AppData\Local\n
 
 ## Ubah Dashboard
 
-- Cari File nvim/lua/custom/Plugins/alpha.lua
+- Cari File nvim/lua/custom/plugins/alpha.lua <br>
   -- Ubah Bagian Code Berikut
 
 ```
@@ -63,5 +63,5 @@ git clone https://github.com/pojokcodeid/NvChad-config.git $HOME\AppData\Local\n
 
 ```
 
--- Link Untuk Generate Dashboard <br>
-https://patorjk.com/software/taag/
+- Link Untuk Generate Dashboard <br>
+  https://patorjk.com/software/taag/
