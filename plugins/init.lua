@@ -140,4 +140,51 @@ return {
       require "custom.plugins.wedevicon"
     end,
   },
+  ["windwp/nvim-ts-autotag"] = {
+    ft = {
+      "html",
+      "javascript",
+      "typescript",
+      "javascriptreact",
+      "typescriptreact",
+      "svelte",
+      "vue",
+      "tsx",
+      "jsx",
+      "rescript",
+      "xml",
+      "php",
+      "markdown",
+      "glimmer",
+      "handlebars",
+      "hbs",
+    },
+    config = function()
+      require "custom.plugins.tsautotag"
+    end,
+  },
+  ["karb94/neoscroll.nvim"] = {
+    config = function()
+      require("neoscroll").setup()
+    end,
+  },
+  ["dstein64/nvim-scrollview"] = {
+    event = { "BufRead", "BufNewFile" },
+    config = function()
+      require "custom.plugins.nvimscroll"
+    end,
+  },
+  ["Pocco81/true-zen.nvim"] = {
+    cmd = {
+      "TZFocus",
+      "TZAtaraxis",
+      "TZMinimalist",
+    },
+    config = function()
+      require "custom.plugins.true-zen"
+    end,
+  },
+  ["SmiteshP/nvim-navic"] = {
+    requires = "neovim/nvim-lspconfig",
+  },
 }
