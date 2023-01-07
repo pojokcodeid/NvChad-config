@@ -56,6 +56,8 @@ sudo apt install build-essential libssl-dev
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 source ~/.bashrc
 nvm install 18.12.1
+node --version
+npm --version
 ```
 
 - Install unzip, ripgrep
