@@ -29,3 +29,17 @@ git clone https://github.com/pojokcodeid/NvChad-config.git ~/.config/nvim/lua/cu
 git clone https://github.com/NvChad/NvChad $HOME\AppData\Local\nvim --depth 1 && nvim
 git clone https://github.com/pojokcodeid/NvChad-config.git $HOME\AppData\Local\nvim\lua\custom
 ```
+
+## Plugins
+
+| No  | Plugin                        | Link                                             |
+| --- | ----------------------------- | ------------------------------------------------ |
+| 1   | NvChad                        | https://nvchad.com/                              |
+| 2   | better-escape                 | https://github.com/max397574/better-escape.nvim  |
+| 3   | Color Scheme                  | https://github.com/folke/tokyonight.nvim         |
+| 4   | akinsho/toggleterm.nvim       | https://github.com/akinsho/toggleterm.nvim       |
+| 5   | CRAG666/code_runner.nvim      | https://github.com/CRAG666/code_runner.nvim      |
+| 6   | rcarriga/nvim-notify          | https://github.com/rcarriga/nvim-notify          |
+| 7   | mrjones2014/smart-splits.nvim | https://github.com/mrjones2014/smart-splits.nvim |
+| 8   | stevearc/dressing.nvim        | https://github.com/stevearc/dressing.nvim        |
+| 9   | folke/todo-comments.nvim      | https://github.com/folke/todo-comments.nvim      |
