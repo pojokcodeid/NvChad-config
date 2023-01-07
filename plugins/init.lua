@@ -187,4 +187,11 @@ return {
   ["SmiteshP/nvim-navic"] = {
     requires = "neovim/nvim-lspconfig",
   },
+  ["manzeloth/live-server"] = {},
+  ["mg979/vim-visual-multi"] = {},
+  ["NvChad/nvim-colorizer.lua"] = {
+    config = function()
+      require "custom.plugins.colorizer"
+    end,
+  },
 }
