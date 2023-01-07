@@ -85,7 +85,9 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 git clone https://github.com/pojokcodeid/NvChad-config.git ~/.config/nvim/lua/custom
 ```
 
-## Copy Config (Windows)
+## Config Windows
+
+- Pastikan Sudah menginstall kebutuhan dasar diatas
 
 ```
 git clone https://github.com/NvChad/NvChad $HOME\AppData\Local\nvim --depth 1 && nvim
