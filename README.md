@@ -30,7 +30,7 @@ git clone https://github.com/NvChad/NvChad $HOME\AppData\Local\nvim --depth 1 &&
 git clone https://github.com/pojokcodeid/NvChad-config.git $HOME\AppData\Local\nvim\lua\custom
 ```
 
-## Plugins
+## Plugins dan Sumber Yang Digunakan
 
 | No  | Plugin                        | Link                                             |
 | --- | ----------------------------- | ------------------------------------------------ |
