@@ -43,3 +43,25 @@ git clone https://github.com/pojokcodeid/NvChad-config.git $HOME\AppData\Local\n
 | 7   | mrjones2014/smart-splits.nvim | https://github.com/mrjones2014/smart-splits.nvim |
 | 8   | stevearc/dressing.nvim        | https://github.com/stevearc/dressing.nvim        |
 | 9   | folke/todo-comments.nvim      | https://github.com/folke/todo-comments.nvim      |
+
+## Ubah Dashboard
+
+- Cari File nvim/lua/custom/Plugins/alpha.lua
+  -- Ubah Bagian Code Berikut
+
+```
+ val = {
+      [[             _       _                    _      ]],
+      [[            (_)     | |                  | |     ]],
+      [[ _ __   ___  _  ___ | | __   ___ ___   __| | ___ ]],
+      [[| '_ \ / _ \| |/ _ \| |/ /  / __/ _ \ / _` |/ _ \]],
+      [[| |_) | (_) | | (_) |   <  | (_| (_) | (_| |  __/]],
+      [[| .__/ \___/| |\___/|_|\_\  \___\___/ \__,_|\___|]],
+      [[| |        _/ |                                  ]],
+      [[|_|       |__/                                   ]],
+    },
+
+```
+
+-- Link Untuk Generate Dashboard <br>
+https://patorjk.com/software/taag/
