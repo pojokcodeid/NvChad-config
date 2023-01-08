@@ -77,12 +77,6 @@ return {
     end,
   },
 
-  ["folke/tokyonight.nvim"] = {
-    config = function()
-      require "custom.plugins.colorscheme"
-    end,
-  },
-
   ["akinsho/toggleterm.nvim"] = {
     config = function()
       require "custom.plugins.toggleterm"
