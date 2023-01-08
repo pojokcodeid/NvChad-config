@@ -9,6 +9,8 @@ M.treesitter = {
     "css",
     "javascript",
     "c",
+    "cpp",
+    "python",
   },
 }
 
@@ -32,6 +34,8 @@ M.mason = {
     "clangd",
     -- php
     "intelephense",
+    -- Python
+    "pyright",
   },
 }
 

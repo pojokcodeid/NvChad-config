@@ -30,9 +30,10 @@ null_ls.setup {
   sources = {
     formatting.prettier,
     formatting.prettierd,
-    formatting.black.with { extra_args = { "--fast" } },
+    formatting.black.with { extra_args = { "--fast" } }, -- install sudo apt -y install black
     formatting.stylua,
     formatting.eslint_d,
+    formatting.clang_format, -- install sudo apt install clang-format
   },
   on_attach = function(client, bufnr)
     --if client.resolved_capabilities.document_formatting then
