@@ -5,7 +5,6 @@ autocmd("VimResized", {
   pattern = "*",
   command = "tabdo wincmd =",
 })
-
 require "custom.winbar"
 
 require "custom.options"

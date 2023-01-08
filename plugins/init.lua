@@ -7,25 +7,19 @@ return {
   -- Override plugin definition options
   ["neovim/nvim-lspconfig"] = {
     config = function()
-      --require "plugins.configs.lspconfig"
-      --require "custom.plugins.lspconfig"
-      require "custom.lsp"
+      require "plugins.configs.lspconfig"
+      require "custom.plugins.lspconfig"
     end,
   },
-  ["williamboman/mason.nvim"] = {},
-  ["williamboman/mason-lspconfig.nvim"] = {},
-  ["RRethy/vim-illuminate"] = {},
-  ["williamboman/nvim-lsp-installer"] = {},
-  ["jose-elias-alvarez/null-ls.nvim"] = {},
 
   -- overrde plugin configs
   ["nvim-treesitter/nvim-treesitter"] = {
     override_options = overrides.treesitter,
   },
 
-  -- ["williamboman/mason.nvim"] = {
-  --   override_options = overrides.mason,
-  -- },
+  ["williamboman/mason.nvim"] = {
+    override_options = overrides.mason,
+  },
 
   ["kyazdani42/nvim-tree.lua"] = {
     override_options = overrides.nvimtree,
@@ -48,12 +42,12 @@ return {
   },
 
   -- code formatting, linting etc
-  -- ["jose-elias-alvarez/null-ls.nvim"] = {
-  --   after = "nvim-lspconfig",
-  --   config = function()
-  --     require "custom.plugins.null-ls"
-  --   end,
-  -- },
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+    after = "nvim-lspconfig",
+    config = function()
+      require "custom.plugins.null-ls"
+    end,
+  },
 
   ["goolord/alpha-nvim"] = {
     after = "base46",
@@ -115,7 +109,7 @@ return {
       require "custom.plugins.lualine"
     end,
   },
-  -- ["mfussenegger/nvim-jdtls"] = {},
+  ["mfussenegger/nvim-jdtls"] = {},
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
   -- plugins tambahan
