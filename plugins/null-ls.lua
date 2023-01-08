@@ -33,7 +33,8 @@ null_ls.setup {
     formatting.black.with { extra_args = { "--fast" } }, -- install sudo apt -y install black
     formatting.stylua,
     formatting.eslint_d,
-    formatting.clang_format, -- install sudo apt install clang-format
+    formatting.clang_format.with { filetype = { "cpp", "c" } }, -- install sudo apt install clang-format
+    formatting.google_java_format.with { filetype = { "java" } },
   },
   on_attach = function(client, bufnr)
     --if client.resolved_capabilities.document_formatting then
