@@ -129,3 +129,15 @@ git clone https://github.com/pojokcodeid/NvChad-config.git $HOME\AppData\Local\n
 
 - Link Untuk Generate Dashboard <br>
   https://patorjk.com/software/taag/
+
+- Install Null-ls Formatter (linux)
+
+```
+sudo apt -y install black
+sudo apt install clang-format
+
+npm i -g google-java-format
+npm i -g clang-format
+npm i -g black
+
+```
