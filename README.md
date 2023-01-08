@@ -141,3 +141,10 @@ npm i -g clang-format
 npm i -g black
 
 ```
+
+## Create java Home
+
+```
+echo export JAVA_HOME='$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")' | sudo tee /etc/profile.d/jdk_home.sh > /dev/null
+echo $JAVA_HOME
+```
