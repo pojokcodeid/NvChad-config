@@ -125,22 +125,26 @@ return {
       vim.notify = require "notify"
     end,
   },
+  -- untuk split
   ["mrjones2014/smart-splits.nvim"] = {
     config = function()
       require "custom.plugins.smart-split"
     end,
   },
+  -- untuk input dan rename inline input
   ["stevearc/dressing.nvim"] = {
     config = function()
       require "custom.plugins.dressing"
     end,
   },
+  -- untuk pewarnaan TODO:
   ["folke/todo-comments.nvim"] = {
     event = "BufRead",
     config = function()
       require("todo-comments").setup()
     end,
   },
+  -- untuk auto close tag
   ["windwp/nvim-ts-autotag"] = {
     ft = {
       "html",
@@ -164,6 +168,7 @@ return {
       require "custom.plugins.tsautotag"
     end,
   },
+  -- untuk scroll view
   ["karb94/neoscroll.nvim"] = {
     config = function()
       require("neoscroll").setup()
@@ -175,6 +180,13 @@ return {
       require "custom.plugins.nvimscroll"
     end,
   },
+  -- untuk nav diatas
+  ["SmiteshP/nvim-navic"] = {
+    requires = "neovim/nvim-lspconfig",
+  },
+
+  -- Optional Plugins
+  -- Zen mode
   ["Pocco81/true-zen.nvim"] = {
     cmd = {
       "TZFocus",
@@ -185,14 +197,41 @@ return {
       require "custom.plugins.true-zen"
     end,
   },
-  ["SmiteshP/nvim-navic"] = {
-    requires = "neovim/nvim-lspconfig",
-  },
+  --untuk live server web dev
   ["manzeloth/live-server"] = {},
+  -- untuk multi select
   ["mg979/vim-visual-multi"] = {},
+  -- untuk pewarnaan css
   ["NvChad/nvim-colorizer.lua"] = {
     config = function()
       require "custom.plugins.colorizer"
     end,
   },
+  -- untuk auto comp commond mode
+  ["gelguy/wilder.nvim"] = {
+    config = function()
+      local wilder = require "wilder"
+      wilder.setup { modes = { ":", "/", "?" } }
+      wilder.set_option(
+        "renderer",
+        wilder.popupmenu_renderer {
+          highlighter = wilder.basic_highlighter(),
+          left = { " ", wilder.popupmenu_devicons() },
+          right = { " ", wilder.popupmenu_scrollbar() },
+        }
+      )
+    end,
+  },
+  -- untuk auto save
+  ["907th/vim-auto-save"] = { event = "InsertEnter" },
+  -- Manage your yank history
+  ["gbprod/yanky.nvim"] = {
+    config = function()
+      require "custom.plugins.yanky"
+    end,
+  },
+  -- Handy unix command inside Vim (Rename, Move etc.)
+  ["tpope/vim-eunuch"] = { cmd = { "Rename", "Delete" } },
+  -- untuk format yang belum di config null-ls
+  ["sbdchd/neoformat"] = { cmd = { "Neoformat" } },
 }
