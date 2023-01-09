@@ -103,6 +103,12 @@ return {
       },
     },
   },
+  -- color scheme
+  ["folke/tokyonight.nvim"] = {
+    config = function()
+      require "custom.plugins.tokyonight"
+    end,
+  },
   -- untuk status line dibwah
   ["nvim-lualine/lualine.nvim"] = {
     config = function()
