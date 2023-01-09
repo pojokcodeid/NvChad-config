@@ -85,6 +85,12 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
 git clone https://github.com/pojokcodeid/NvChad-config.git ~/.config/nvim/lua/custom
 ```
 
+- Untuk Java Copy Confignya
+
+```
+cp -r ~/.config/nvim/lua/custom/ftplugin/ ~/.config/nvim/ftplugin/
+```
+
 ## Config Windows
 
 - Pastikan Sudah menginstall kebutuhan dasar diatas
@@ -92,6 +98,12 @@ git clone https://github.com/pojokcodeid/NvChad-config.git ~/.config/nvim/lua/cu
 ```
 git clone https://github.com/NvChad/NvChad $HOME\AppData\Local\nvim --depth 1 && nvim
 git clone https://github.com/pojokcodeid/NvChad-config.git $HOME\AppData\Local\nvim\lua\custom
+```
+
+- Menggunakan Java Copy Confignya
+
+```
+Copy-Item -Path "$env:LOCALAPPDATA\nvim\lua\custom\ftplugin" -Destination "$env:LOCALAPPDATA\nvim\ftplugin" -Recurse
 ```
 
 ## Plugins dan Sumber Yang Digunakan
