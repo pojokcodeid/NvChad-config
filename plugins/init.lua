@@ -110,6 +110,11 @@ return {
       require "custom.plugins.wedevicon"
     end,
   },
+  ["lukas-reineke/indent-blankline.nvim"] = {
+    config = function()
+      require "custom.plugins.indentline"
+    end,
+  },
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
   -- plugins tambahan
