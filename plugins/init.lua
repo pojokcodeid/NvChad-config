@@ -68,7 +68,9 @@ return {
       require("core.utils").load_mappings "whichkey"
     end,
   },
+  ["mfussenegger/nvim-jdtls"] = {},
 
+  -- custom for view
   ["hrsh7th/nvim-cmp"] = {
     disable = false,
     after = "friendly-snippets",
@@ -103,10 +105,16 @@ return {
       require "custom.plugins.lualine"
     end,
   },
-  ["mfussenegger/nvim-jdtls"] = {},
+  ["kyazdani42/nvim-web-devicons"] = {
+    config = function()
+      require "custom.plugins.wedevicon"
+    end,
+  },
   -- remove plugin
   -- ["hrsh7th/cmp-path"] = false,
   -- plugins tambahan
+
+  -- Additional View plugins
   ["rcarriga/nvim-notify"] = {
     config = function()
       vim.notify = require "notify"
@@ -126,11 +134,6 @@ return {
     event = "BufRead",
     config = function()
       require("todo-comments").setup()
-    end,
-  },
-  ["kyazdani42/nvim-web-devicons"] = {
-    config = function()
-      require "custom.plugins.wedevicon"
     end,
   },
   ["windwp/nvim-ts-autotag"] = {
