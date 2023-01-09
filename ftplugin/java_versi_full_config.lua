@@ -40,6 +40,16 @@ end
 local root_markers = { ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }
 local root_dir = require("jdtls.setup").find_root(root_markers)
 
+-- pastikan sudah config java home
+-- echo export JAVA_HOME='$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")' | sudo tee /etc/profile.d/jdk_home.sh > /dev/null
+-- echo $JAVA_HOME
+
+local java_home = os.getenv "JAVA_HOME"
+if directory_exists(java_home) then
+else
+  print "java_home Not Exists"
+end
+
 -- calculate workspace dir
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 local workspace_dir = vim.fn.stdpath "data" .. "/site/java/workspace-root/" .. project_name
@@ -87,7 +97,43 @@ local config = {
   capabilities = capabilities(),
   root_dir = root_dir,
   settings = {
-    java = {},
+    java = {
+      eclipse = {
+        downloadSources = true,
+      },
+      configuration = {
+        updateBuildConfiguration = "interactive",
+        runtimes = {
+          {
+            name = "JavaSE-17",
+            path = java_home, --sesuaikan dengan java home osnya
+          },
+        },
+      },
+      maven = {
+        downloadSources = true,
+      },
+      implementationsCodeLens = {
+        enabled = true,
+      },
+      referencesCodeLens = {
+        enabled = true,
+      },
+      references = {
+        includeDecompiledSources = true,
+      },
+      inlayHints = {
+        parameterNames = {
+          enabled = "all", -- literals, all, none
+        },
+      },
+      format = {
+        enabled = false,
+        -- settings = {
+        --   profile = "asdf"
+        -- }
+      },
+    },
     signatureHelp = { enabled = true },
     completion = {
       favoriteStaticMembers = {
