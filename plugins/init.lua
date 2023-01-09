@@ -49,6 +49,7 @@ return {
     end,
   },
 
+  -- Dasboard
   ["goolord/alpha-nvim"] = {
     after = "base46",
     disable = false,
@@ -56,7 +57,7 @@ return {
       require "custom.plugins.alpha"
     end,
   },
-
+  -- key mappings
   ["folke/which-key.nvim"] = {
     disable = false,
     module = "which-key",
@@ -68,6 +69,7 @@ return {
       require("core.utils").load_mappings "whichkey"
     end,
   },
+  -- java config
   ["mfussenegger/nvim-jdtls"] = {},
 
   -- custom for view
@@ -78,12 +80,13 @@ return {
       require "custom.plugins.cmp"
     end,
   },
-
+  -- untuk popup terminal
   ["akinsho/toggleterm.nvim"] = {
     config = function()
       require "custom.plugins.toggleterm"
     end,
   },
+  -- untuk menjalankan code program
   ["CRAG666/code_runner.nvim"] = {
     config = function()
       require "custom.plugins.coderunner"
@@ -100,16 +103,19 @@ return {
       },
     },
   },
+  -- untuk status line dibwah
   ["nvim-lualine/lualine.nvim"] = {
     config = function()
       require "custom.plugins.lualine"
     end,
   },
+  -- untuk icon
   ["kyazdani42/nvim-web-devicons"] = {
     config = function()
       require "custom.plugins.wedevicon"
     end,
   },
+  -- untuk garis warna inden codingan
   ["lukas-reineke/indent-blankline.nvim"] = {
     config = function()
       require "custom.plugins.indentline"
