@@ -106,7 +106,8 @@ return {
   -- color scheme
   ["folke/tokyonight.nvim"] = {
     config = function()
-      require "custom.plugins.tokyonight"
+      -- require "custom.plugins.tokyonight"
+      vim.cmd [[colorscheme tokyonight-night]]
     end,
   },
   -- untuk status line dibwah
