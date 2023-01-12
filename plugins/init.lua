@@ -88,9 +88,9 @@ return {
   },
   -- untuk menjalankan code program
   ["CRAG666/code_runner.nvim"] = {
-    config = function()
-      require "custom.plugins.coderunner"
-    end,
+    -- config = function()
+    --   require "custom.plugins.coderunner"
+    -- end,
   },
   ["NvChad/ui"] = {
     override_options = {
@@ -247,4 +247,8 @@ return {
   ["tpope/vim-eunuch"] = { cmd = { "Rename", "Delete" } },
   -- untuk format yang belum di config null-ls
   ["sbdchd/neoformat"] = { cmd = { "Neoformat" } },
+  -- alternatif pengganti code runner
+  ["krshrimali/nvim-autorunner"] = {
+    requires = "rcarriga/nvim-notify",
+  },
 }

@@ -91,7 +91,7 @@ local mappings2 = {
   ["/"] = { "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", "Commet Block" },
 }
 local mappings = {
-  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+  ["A"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
@@ -213,6 +213,16 @@ local mappings = {
       "<cmd>ToggleTerm size=70 direction=vertical<cr>mvn exec:java -Dexec.mainClass=com.pojokcode.App<cr>",
       "Run MVN",
     },
+  },
+  a = {
+    name = "AutoRunner",
+    r = { "<cmd>AutoRunnerRun<cr>", "Run the command" },
+    t = { "<cmd>AutoRunnerToggle<cr>", "Toggle output window" },
+    e = { "<cmd>AutoRunnerEditFile<cr>", "Edit build file (if available in runtime directory)" },
+    a = { "<cmd>AutoRunnerAddCommand<cr>", "Add/change command" },
+    c = { "<cmd>AutoRunnerClearCommand<cr>", "Clear command" },
+    C = { "<cmd>AutoRunnerClearAll<cr>", "Clear all (command and buffers)" },
+    p = { "<cmd>AutoRunnerPrintCommand<cr>", "Print command" },
   },
 }
 
