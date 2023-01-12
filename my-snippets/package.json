@@ -136,6 +136,130 @@
       {
         "language": "nunjucks",
         "path": "./B5-Snippets/snippets/bootstrap.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/auth.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/cache.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/config.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/console.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/cookie.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/crypt.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/db.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/eloquent.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/event.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/hash.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/helper.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/log.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/mail.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/redirect.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/relation.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/request.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/response.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/route.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/schema.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/session.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/storage.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/view.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/passport.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/str.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel5/snippets/broadcast.json"
+      },
+      {
+        "language": "blade",
+        "path": "./laravel5/snippets/collective_form_html.json"
+      },
+      {
+        "language": "blade",
+        "path": "./laravel-blade/snippets/snippets.json"
+      },
+      {
+        "language": "blade",
+        "path": "./laravel-blade/snippets/helpers.json"
+      },
+      {
+        "language": "blade",
+        "path": "./laravel-blade/snippets/livewire.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel-blade/snippets/blade.json"
+      },
+      {
+        "language": "php",
+        "path": "./laravel-blade2/src/snippets/snippets.json"
       }
     ]
   }

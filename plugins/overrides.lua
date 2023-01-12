@@ -12,6 +12,7 @@ M.treesitter = {
     "cpp",
     "python",
     "java",
+    "php",
   },
 }
 
