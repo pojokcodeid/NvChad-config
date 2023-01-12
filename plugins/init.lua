@@ -88,9 +88,9 @@ return {
   },
   -- untuk menjalankan code program
   ["CRAG666/code_runner.nvim"] = {
-    -- config = function()
-    --   require "custom.plugins.coderunner"
-    -- end,
+    config = function()
+      require "custom.plugins.coderunner"
+    end,
   },
   ["NvChad/ui"] = {
     override_options = {
@@ -106,8 +106,8 @@ return {
   -- color scheme
   ["folke/tokyonight.nvim"] = {
     config = function()
-      -- require "custom.plugins.tokyonight"
-      vim.cmd [[colorscheme tokyonight-night]]
+      require "custom.plugins.tokyonight"
+      -- vim.cmd [[colorscheme tokyonight-night]]
     end,
   },
   -- untuk status line dibwah
