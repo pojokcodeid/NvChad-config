@@ -4,7 +4,7 @@ if not present then
   return
 end
 
--- require("base46").load_highlight "alpha"
+require("base46").load_highlight "alpha"
 
 local function button(sc, txt, keybind)
   local sc_ = sc:gsub("%s", ""):gsub("SPC", "<leader>")
