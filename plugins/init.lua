@@ -21,9 +21,21 @@ return {
     override_options = overrides.mason,
   },
 
-  ["kyazdani42/nvim-tree.lua"] = {
-    override_options = overrides.nvimtree,
-  },
+  -- untuk icon
+  -- ["kyazdani42/nvim-web-devicons"] = {
+  --   override_options = overrides.wedevicon,
+  --   -- event = "BufWinEnter",
+  --   -- config = function()
+  --   --   require "custom.plugins.wedevicon"
+  --   -- end,
+  -- },
+  -- -- Overide tree explorer
+  -- ["kyazdani42/nvim-tree.lua"] = {
+  --   override_options = overrides.nvimtree,
+  --   -- config = function()
+  --   --   require "custom.plugins.nvimtree"
+  --   -- end,
+  -- },
 
   -- ["akinsho/bufferline.nvim"] = {
   --   tag = "v3.*",
@@ -114,14 +126,9 @@ return {
   },
   -- untuk status line dibwah
   ["nvim-lualine/lualine.nvim"] = {
+    event = "BufWinEnter",
     config = function()
       require "custom.plugins.lualine"
-    end,
-  },
-  -- untuk icon
-  ["kyazdani42/nvim-web-devicons"] = {
-    config = function()
-      require "custom.plugins.wedevicon"
     end,
   },
   -- untuk garis warna inden codingan
