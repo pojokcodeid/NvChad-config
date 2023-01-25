@@ -68,7 +68,7 @@ local setup = {
     v = { "j", "k" },
   },
 }
-
+local is_dap = pcall(require, "dap")
 local opts = {
   mode = "n", -- NORMAL mode
   prefix = "<leader>",
@@ -223,6 +223,119 @@ local mappings = {
     c = { "<cmd>AutoRunnerClearCommand<cr>", "Clear command" },
     C = { "<cmd>AutoRunnerClearAll<cr>", "Clear all (command and buffers)" },
     p = { "<cmd>AutoRunnerPrintCommand<cr>", "Print command" },
+  },
+  D = {
+    name = "Debug",
+    b = {
+      function()
+        if is_dap then
+          require("dap").toggle_breakpoint()
+        else
+          vim.notify("DAP Not Support", "info")
+        end
+      end,
+      "Toggle Breakpoint",
+    },
+    B = {
+      function()
+        if is_dap then
+          require("dap").clear_breakpoints()
+        else
+          vim.notify("DAP Not Support", "info")
+        end
+      end,
+      "Clear Breakpoints",
+    },
+    c = {
+      function()
+        if is_dap then
+          require("dap").continue()
+        else
+          vim.notify("DAP Not Support", "info")
+        end
+      end,
+      "Start/Continue",
+    },
+    i = {
+      function()
+        if is_dap then
+          require("dap").step_into()
+        else
+          vim.notify("DAP Not Support", "info")
+        end
+      end,
+      "Step Into (F11)",
+    },
+    o = {
+      function()
+        if is_dap then
+          require("dap").step_over()
+        else
+          vim.notify("DAP Not Support", "info")
+        end
+      end,
+      "Step Over (F10)",
+    },
+    O = {
+      function()
+        if is_dap then
+          require("dap").step_out()
+        else
+          vim.notify("DAP Not Support", "info")
+        end
+      end,
+      "Step Out (S-F11)",
+    },
+    q = {
+      function()
+        if is_dap then
+          require("dap").close()
+        else
+          vim.notify("DAP Not Support", "info")
+        end
+      end,
+      "Close Session",
+    },
+    Q = {
+      function()
+        if is_dap then
+          require("dap").terminate()
+        else
+          vim.notify("DAP Not Support", "info")
+        end
+      end,
+      "Terminate Session (S-F5)",
+    },
+    p = {
+      function()
+        if is_dap then
+          require("dap").pause()
+        else
+          vim.notify("DAP Not Support", "info")
+        end
+      end,
+      "Pause (F6)",
+    },
+    r = {
+      function()
+        if is_dap then
+          require("dap").restart_frame()
+        else
+          vim.notify("DAP Not Support", "info")
+        end
+      end,
+      "Restart (C-F5)",
+    },
+    R = {
+      function()
+        if is_dap then
+          require("dap").repl.toggle()
+        else
+          vim.notify("DAP Not Support", "info")
+        end
+      end,
+      "Toggle REPL",
+    },
   },
 }
 
