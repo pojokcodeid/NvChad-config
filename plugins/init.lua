@@ -55,7 +55,9 @@ return {
 
   -- code formatting, linting etc
   ["jose-elias-alvarez/null-ls.nvim"] = {
+    event = "BufWinEnter",
     after = "nvim-lspconfig",
+    module = "null-ls",
     config = function()
       require "custom.plugins.null-ls"
     end,
