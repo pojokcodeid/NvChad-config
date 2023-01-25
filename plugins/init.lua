@@ -7,6 +7,14 @@ return {
   -- Override plugin definition options
   ["williamboman/mason-lspconfig.nvim"] = {},
   ["jose-elias-alvarez/null-ls.nvim"] = {},
+  ["jayp0521/mason-null-ls.nvim"] = {
+    requires = { "jose-elias-alvarez/null-ls.nvim" },
+    after = "null-ls.nvim",
+    event = "BufRead",
+    config = function()
+      require "custom.plugins.mason_null_ls"
+    end,
+  },
   ["neovim/nvim-lspconfig"] = {
     -- config = function()
     --   require "plugins.configs.lspconfig"
