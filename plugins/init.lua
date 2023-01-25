@@ -260,4 +260,22 @@ return {
   ["krshrimali/nvim-autorunner"] = {
     requires = "rcarriga/nvim-notify",
   },
+  -- For Debuging
+  ["mfussenegger/nvim-dap"] = {
+    event = "BufRead",
+  },
+  ["rcarriga/nvim-dap-ui"] = {
+    requires = { "mfussenegger/nvim-dap" },
+    event = "BufRead",
+    config = function()
+      require "custom.plugins.dapui"
+    end,
+  },
+  ["jayp0521/mason-nvim-dap.nvim"] = {
+    requires = { "williamboman/mason.nvim", "mfussenegger/nvim-dap" },
+    event = "BufRead",
+    config = function()
+      require "custom.plugins.mason_dap"
+    end,
+  },
 }
