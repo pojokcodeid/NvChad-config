@@ -100,25 +100,39 @@ git clone https://github.com/NvChad/NvChad $HOME\AppData\Local\nvim --depth 1 &&
 git clone https://github.com/pojokcodeid/NvChad-config.git $HOME\AppData\Local\nvim\lua\custom
 ```
 
-- Menggunakan Java Copy Confignya
+## Config Untuk Java
+
+- Create java Home
+
+```
+echo export JAVA_HOME='$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")' | sudo tee /etc/profile.d/jdk_home.sh > /dev/null
+echo $JAVA_HOME
+
+```
+
+- Copy Confignya
 
 ```
 Copy-Item -Path "$env:LOCALAPPDATA\nvim\lua\custom\ftplugin" -Destination "$env:LOCALAPPDATA\nvim\ftplugin" -Recurse
 ```
 
-## Plugins dan Sumber Yang Digunakan
+## Install Treesitter
 
-| No  | Plugin                        | Link                                             |
-| --- | ----------------------------- | ------------------------------------------------ |
-| 1   | NvChad                        | https://nvchad.com/                              |
-| 2   | better-escape                 | https://github.com/max397574/better-escape.nvim  |
-| 3   | Color Scheme                  | https://github.com/folke/tokyonight.nvim         |
-| 4   | akinsho/toggleterm.nvim       | https://github.com/akinsho/toggleterm.nvim       |
-| 5   | CRAG666/code_runner.nvim      | https://github.com/CRAG666/code_runner.nvim      |
-| 6   | rcarriga/nvim-notify          | https://github.com/rcarriga/nvim-notify          |
-| 7   | mrjones2014/smart-splits.nvim | https://github.com/mrjones2014/smart-splits.nvim |
-| 8   | stevearc/dressing.nvim        | https://github.com/stevearc/dressing.nvim        |
-| 9   | folke/todo-comments.nvim      | https://github.com/folke/todo-comments.nvim      |
+- Gunakan Command Mode
+
+```
+:TSInstall lua html css  < dan seterusnya >
+```
+
+## Install LSP
+
+- Gunakan Command Mode
+
+```
+:Mason
+-- tekan enter
+-- Pilih LSP,Formatter dan Linter sesuai kebutuhan
+```
 
 ## Ubah Dashboard
 
@@ -154,9 +168,16 @@ npm i -g black
 
 ```
 
-## Create java Home
+## Plugins dan Sumber Yang Digunakan
 
-```
-echo export JAVA_HOME='$(readlink -f /usr/bin/javac | sed "s:/bin/javac::")' | sudo tee /etc/profile.d/jdk_home.sh > /dev/null
-echo $JAVA_HOME
-```
+| No  | Plugin                        | Link                                             |
+| --- | ----------------------------- | ------------------------------------------------ |
+| 1   | NvChad                        | https://nvchad.com/                              |
+| 2   | better-escape                 | https://github.com/max397574/better-escape.nvim  |
+| 3   | Color Scheme                  | https://github.com/folke/tokyonight.nvim         |
+| 4   | akinsho/toggleterm.nvim       | https://github.com/akinsho/toggleterm.nvim       |
+| 5   | CRAG666/code_runner.nvim      | https://github.com/CRAG666/code_runner.nvim      |
+| 6   | rcarriga/nvim-notify          | https://github.com/rcarriga/nvim-notify          |
+| 7   | mrjones2014/smart-splits.nvim | https://github.com/mrjones2014/smart-splits.nvim |
+| 8   | stevearc/dressing.nvim        | https://github.com/stevearc/dressing.nvim        |
+| 9   | folke/todo-comments.nvim      | https://github.com/folke/todo-comments.nvim      |
