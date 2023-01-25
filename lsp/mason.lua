@@ -26,10 +26,12 @@ local settings = {
 }
 
 require("mason").setup(settings)
-require("mason-lspconfig").setup {
-  ensure_installed = servers,
-  automatic_installation = true,
-}
+-- require("mason-lspconfig").setup {
+--   ensure_installed = servers,
+--   automatic_installation = true,
+-- }
+-- * buka remark ini jika ingin menjalankan dengan cara install dan remark config diatas (pilih satu)
+require("mason-lspconfig").setup()
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status_ok then

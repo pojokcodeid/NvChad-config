@@ -5,10 +5,15 @@ return {
   -- ["goolord/alpha-nvim"] = { disable = false } -- enables dashboard
 
   -- Override plugin definition options
+  ["williamboman/mason-lspconfig.nvim"] = {},
   ["neovim/nvim-lspconfig"] = {
+    -- config = function()
+    --   require "plugins.configs.lspconfig"
+    --   require "custom.plugins.lspconfig"
+    -- end,
+    requires = { "williamboman/mason-lspconfig.nvim" },
     config = function()
-      require "plugins.configs.lspconfig"
-      require "custom.plugins.lspconfig"
+      require "custom.lsp"
     end,
   },
 

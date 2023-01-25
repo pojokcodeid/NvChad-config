@@ -264,7 +264,7 @@ local mappings = {
           vim.notify("DAP Not Support", "info")
         end
       end,
-      "Step Into (F11)",
+      "Step Into",
     },
     o = {
       function()
@@ -274,7 +274,7 @@ local mappings = {
           vim.notify("DAP Not Support", "info")
         end
       end,
-      "Step Over (F10)",
+      "Step Over",
     },
     O = {
       function()
@@ -284,7 +284,7 @@ local mappings = {
           vim.notify("DAP Not Support", "info")
         end
       end,
-      "Step Out (S-F11)",
+      "Step Out",
     },
     q = {
       function()
@@ -304,7 +304,7 @@ local mappings = {
           vim.notify("DAP Not Support", "info")
         end
       end,
-      "Terminate Session (S-F5)",
+      "Terminate Session",
     },
     p = {
       function()
@@ -314,7 +314,7 @@ local mappings = {
           vim.notify("DAP Not Support", "info")
         end
       end,
-      "Pause (F6)",
+      "Pause",
     },
     r = {
       function()
@@ -324,7 +324,7 @@ local mappings = {
           vim.notify("DAP Not Support", "info")
         end
       end,
-      "Restart (C-F5)",
+      "Restart",
     },
     R = {
       function()
