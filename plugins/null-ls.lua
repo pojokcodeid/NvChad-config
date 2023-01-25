@@ -28,13 +28,13 @@ null_ls.setup {
   debug = false,
   -- sources = sources,
   sources = {
-    formatting.prettier,
-    formatting.prettierd,
+    --formatting.prettier,
+    --formatting.prettierd,
     formatting.black.with { extra_args = { "--fast" } }, -- install sudo apt -y install black
     formatting.stylua,
-    formatting.eslint_d,
-    formatting.clang_format.with { filetype = { "cpp", "c" } }, -- install sudo apt install clang-format
-    formatting.google_java_format.with { filetype = { "java" } },
+    --formatting.eslint_d,
+    --formatting.clang_format.with { filetype = { "cpp", "c" } }, -- install sudo apt install clang-format
+    --formatting.google_java_format.with { filetype = { "java" } },
   },
   on_attach = function(client, bufnr)
     --if client.resolved_capabilities.document_formatting then

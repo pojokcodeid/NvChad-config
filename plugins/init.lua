@@ -6,6 +6,7 @@ return {
 
   -- Override plugin definition options
   ["williamboman/mason-lspconfig.nvim"] = {},
+  ["jose-elias-alvarez/null-ls.nvim"] = {},
   ["neovim/nvim-lspconfig"] = {
     -- config = function()
     --   require "plugins.configs.lspconfig"
@@ -59,14 +60,14 @@ return {
   },
 
   -- code formatting, linting etc
-  ["jose-elias-alvarez/null-ls.nvim"] = {
-    event = "BufWinEnter",
-    after = "nvim-lspconfig",
-    module = "null-ls",
-    config = function()
-      require "custom.plugins.null-ls"
-    end,
-  },
+  -- ["jose-elias-alvarez/null-ls.nvim"] = {
+  --   event = "BufWinEnter",
+  --   after = "nvim-lspconfig",
+  --   module = "null-ls",
+  --   config = function()
+  --     require "custom.plugins.null-ls"
+  --   end,
+  -- },
 
   -- Dasboard
   ["goolord/alpha-nvim"] = {
