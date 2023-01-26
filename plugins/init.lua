@@ -290,7 +290,7 @@ return {
     end,
   },
   ["jayp0521/mason-nvim-dap.nvim"] = {
-    requires = { "williamboman/mason.nvim", "mfussenegger/nvim-dap" },
+    -- requires = { "williamboman/mason.nvim", "mfussenegger/nvim-dap" },
     event = "BufRead",
     config = function()
       require "custom.plugins.mason_dap"
