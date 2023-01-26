@@ -32,8 +32,10 @@ return {
   },
 
   ["williamboman/mason.nvim"] = {
-    override_options = overrides.mason,
+    event = "BufRead",
   },
+  -- override_options = overrides.mason,
+  -- },
 
   -- untuk icon
   -- ["kyazdani42/nvim-web-devicons"] = {
