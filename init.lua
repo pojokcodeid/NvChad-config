@@ -5,6 +5,15 @@ autocmd("VimResized", {
   pattern = "*",
   command = "tabdo wincmd =",
 })
+-- autocmd("BufWinEnter", {
+--   pattern = "*",
+--   command = "set textwidth=80",
+-- })
+-- autocmd("BufWinEnter", {
+--   pattern = "*",
+--   command = "set colorcolumn=+1",
+-- })
+
 require "custom.winbar"
 
 require "custom.options"
