@@ -283,7 +283,7 @@ return {
     event = "BufRead",
   },
   ["rcarriga/nvim-dap-ui"] = {
-    requires = { "mfussenegger/nvim-dap" },
+    -- requires = { "mfussenegger/nvim-dap" },
     event = "BufRead",
     config = function()
       require "custom.plugins.dapui"
