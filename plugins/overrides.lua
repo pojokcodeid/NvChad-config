@@ -5,14 +5,14 @@ M.treesitter = {
   ensure_installed = {
     "vim",
     "lua",
-    "html",
-    "css",
-    "javascript",
-    "c",
-    "cpp",
-    "python",
-    "java",
-    "php",
+    --"html",
+    --"css",
+    --"javascript",
+    --"c",
+    --"cpp",
+    --"python",
+    --"java",
+    --"php",
   },
 }
 
