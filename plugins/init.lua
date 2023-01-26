@@ -33,6 +33,16 @@ return {
 
   ["williamboman/mason.nvim"] = {
     event = "BufRead",
+    module = "mason",
+    cmd = {
+      "Mason",
+      "MasonInstall",
+      "MasonUninstall",
+      "MasonUninstallAll",
+      "MasonLog",
+      "MasonUpdate", -- astronvim command
+      "MasonUpdateAll", -- astronvim command
+    },
   },
   -- override_options = overrides.mason,
   -- },
