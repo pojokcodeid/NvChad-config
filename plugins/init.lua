@@ -28,7 +28,11 @@ return {
 
   -- overrde plugin configs
   ["nvim-treesitter/nvim-treesitter"] = {
-    override_options = overrides.treesitter,
+    -- override_options = overrides.treesitter,
+    event = "BufRead",
+    config = function()
+      require "custom.plugins.treesitter"
+    end,
   },
 
   ["williamboman/mason.nvim"] = {
