@@ -1,15 +1,19 @@
-require("tokyonight").setup {
+local status_ok, tokyonight = pcall(require, "tokyonight")
+if not status_ok then
+  return
+end
+tokyonight.setup {
   -- your configuration comes here
   -- or leave it empty to use the default settings
-  style = "darker", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-  light_style = "night", -- The theme is used when the background is set to light
+  style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+  light_style = "day", -- The theme is used when the background is set to light
   transparent = false, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
     -- Style to be applied to different syntax groups
     -- Value is any valid attr-list value for `:help nvim_set_hl`
     -- comments = { italic = true },
-    comments = { italic = false },
+    comments = { italic = true },
     keywords = { italic = true },
     functions = {},
     variables = {},
@@ -25,12 +29,12 @@ require("tokyonight").setup {
 
   --- You can override specific color groups to use other groups or a hex color
   --- function will be called with a ColorScheme table
-  ---@param colors ColorScheme
-  on_colors = function(colors) end,
+  --@param colors ColorScheme
+  --on_colors = function(colors) end,
 
   --- You can override specific highlights to use other groups or a hex color
   --- function will be called with a Highlights and ColorScheme table
-  ---@param highlights Highlights
-  ---@param colors ColorScheme
-  on_highlights = function(highlights, colors) end,
+  --@param highlights Highlights
+  --@param colors ColorScheme
+  --on_highlights = function(highlights, colors) end,
 }
