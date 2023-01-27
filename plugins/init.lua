@@ -52,13 +52,13 @@ return {
   -- },
 
   -- untuk icon
-  -- ["kyazdani42/nvim-web-devicons"] = {
-  --   override_options = overrides.wedevicon,
-  --   -- event = "BufWinEnter",
-  --   -- config = function()
-  --   --   require "custom.plugins.wedevicon"
-  --   -- end,
-  -- },
+  ["nvim-tree/nvim-web-devicons"] = {
+    -- override_options = overrides.wedevicon,
+    -- event = "BufWinEnter",
+    config = function()
+      require "custom.plugins.wedevicon"
+    end,
+  },
   -- -- Overide tree explorer
   -- ["kyazdani42/nvim-tree.lua"] = {
   --   override_options = overrides.nvimtree,
