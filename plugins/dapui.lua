@@ -1,4 +1,11 @@
 local dap, dapui = require "dap", require "dapui"
+if not dap then
+  return
+end
+
+if not dapui then
+  return
+end
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
   dapui.open()
