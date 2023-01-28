@@ -28,7 +28,7 @@ null_ls.setup {
   debug = false,
   -- sources = sources,
   sources = {
-    --formatting.prettier,
+    formatting.prettier,
     --formatting.prettierd,
     formatting.black.with { extra_args = { "--fast" } }, -- install sudo apt -y install black
     formatting.stylua,
