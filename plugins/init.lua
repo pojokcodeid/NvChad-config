@@ -312,4 +312,5 @@ return {
       require "custom.plugins.mason_dap"
     end,
   },
+  ["williamboman/nvim-lsp-installer"] = {},
 }
