@@ -5,7 +5,16 @@ local capabilities = require("custom.lsp.handlers").capabilities
 
 local lspconfig = require "lspconfig"
 
-local servers = { "sumneko_lua", "html", "cssls", "tsserver", "clangd", "emmet_ls", "intelephense", "pyright" }
+local servers = {
+  "sumneko_lua",
+  "html",
+  "cssls",
+  "tsserver",
+  "clangd",
+  "emmet_ls",
+  "intelephense",
+  "pyright",
+}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

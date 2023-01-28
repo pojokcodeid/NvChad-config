@@ -13,7 +13,11 @@ M.ui = {
   transparency = false,
 }
 
-M.plugins = require "custom.plugins"
+if not vim.fn.has "win32" == 1 then
+  M.plugins = require "custom.plugins"
+else 
+  M.plugins = require "custom.plugins.init_win"
+end
 
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
