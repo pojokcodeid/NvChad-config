@@ -5,106 +5,51 @@ return {
   -- ["goolord/alpha-nvim"] = { disable = false } -- enables dashboard
 
   -- Override plugin definition options
-  -- ["williamboman/mason-lspconfig.nvim"] = {},
-  -- -- ["jose-elias-alvarez/null-ls.nvim"] = {},
-  -- ["jayp0521/mason-null-ls.nvim"] = {
-  --   requires = { "jose-elias-alvarez/null-ls.nvim" },
-  --   after = "null-ls.nvim",
-  --   event = "BufRead",
-  --   config = function()
-  --     require "custom.plugins.mason_null_ls"
-  --   end,
-  -- },
-  -- ["neovim/nvim-lspconfig"] = {
-  --   config = function()
-  --     require "plugins.configs.lspconfig"
-  --     require "custom.plugins.lspconfig"
-  --   end,
-  --   -- requires = { "williamboman/mason-lspconfig.nvim" },
-  --   -- config = function()
-  --   --   require "custom.lsp"
-  --   -- end,
-  -- },
-
-  -- -- overrde plugin configs
-  -- ["nvim-treesitter/nvim-treesitter"] = {
-  --   override_options = overrides.treesitter,
-  --   -- event = "BufRead",
-  --   -- config = function()
-  --   --   require "custom.plugins.treesitter"
-  --   -- end,
-  -- },
-  --
-  -- ["williamboman/mason.nvim"] = {
-  --   --   event = "BufRead",
-  --   --   module = "mason",
-  --   --   cmd = {
-  --   --     "Mason",
-  --   --     "MasonInstall",
-  --   --     "MasonUninstall",
-  --   --     "MasonUninstallAll",
-  --   --     "MasonLog",
-  --   --     "MasonUpdate", -- astronvim command
-  --   --     "MasonUpdateAll", -- astronvim command
-  --   --   },
-  --   -- },
-  --   override_options = overrides.mason,
-  -- },
-
-  -- overide all programming
-  ["hrsh7th/nvim-cmp"] = {
-    event = "BufWinEnter",
-    config = function()
-      require "custom.plugins.cmp"
-    end,
-  },
-  ["hrsh7th/cmp-buffer"] = { after = "nvim-cmp" },
-  ["hrsh7th/cmp-path"] = { after = "nvim-cmp" },
-  ["saadparwaiz1/cmp_luasnip"] = { after = "nvim-cmp" },
-  ["hrsh7th/cmp-nvim-lsp"] = { after = "nvim-cmp", event = "BufWinEnter" },
-  ["hrsh7th/cmp-nvim-lua"] = { after = "nvim-cmp" },
-  ["L3MON4D3/LuaSnip"] = { module = "luasnip", wants = "friendly-snippets" },
-  ["rafamadriz/friendly-snippets"] = { opt = true },
-  ["neovim/nvim-lspconfig"] = {
-    module = "lspconfig",
-    event = "BufWinEnter",
-    config = function()
-      require "custom.lsp"
-    end,
-  },
-  ["williamboman/mason.nvim"] = {
-    module = "mason",
-    cmd = {
-      "Mason",
-      "MasonInstall",
-      "MasonUninstall",
-      "MasonUninstallAll",
-      "MasonLog",
-    },
-    config = function()
-      vim.tbl_map(function(plugin)
-        pcall(require, plugin)
-      end, { "lspconfig", "null-ls" })
-    end,
-  },
   ["williamboman/mason-lspconfig.nvim"] = {},
-  ["jose-elias-alvarez/null-ls.nvim"] = {},
-  ["RRethy/vim-illuminate"] = {},
-  ["nvim-treesitter/nvim-treesitter"] = {
-    run = ":TSUpdate",
-    event = "BufWinEnter",
-    config = function()
-      require "custom.plugins.treesitter"
-    end,
-  },
+  -- ["jose-elias-alvarez/null-ls.nvim"] = {},
   ["jayp0521/mason-null-ls.nvim"] = {
+    requires = { "jose-elias-alvarez/null-ls.nvim" },
     after = "null-ls.nvim",
     event = "BufRead",
     config = function()
       require "custom.plugins.mason_null_ls"
     end,
   },
-  -- end overide programming
+  ["neovim/nvim-lspconfig"] = {
+    config = function()
+      require "plugins.configs.lspconfig"
+      require "custom.plugins.lspconfig"
+    end,
+    -- requires = { "williamboman/mason-lspconfig.nvim" },
+    -- config = function()
+    --   require "custom.lsp"
+    -- end,
+  },
+
+  -- overrde plugin configs
+  ["nvim-treesitter/nvim-treesitter"] = {
+    override_options = overrides.treesitter,
+    -- event = "BufRead",
+    -- config = function()
+    --   require "custom.plugins.treesitter"
+    -- end,
+  },
+
+  ["williamboman/mason.nvim"] = {
+    --   event = "BufRead",
+    --   module = "mason",
+    --   cmd = {
+    --     "Mason",
+    --     "MasonInstall",
+    --     "MasonUninstall",
+    --     "MasonUninstallAll",
+    --     "MasonLog",
+    --     "MasonUpdate", -- astronvim command
+    --     "MasonUpdateAll", -- astronvim command
+    --   },
+    -- },
+    override_options = overrides.mason,
+  },
 
   -- untuk icon
   ["nvim-tree/nvim-web-devicons"] = {
@@ -138,15 +83,15 @@ return {
     end,
   },
 
-  -- -- code formatting, linting etc
-  -- ["jose-elias-alvarez/null-ls.nvim"] = {
-  --   event = "BufWinEnter",
-  --   after = "nvim-lspconfig",
-  --   module = "null-ls",
-  --   config = function()
-  --     require "custom.plugins.null-ls"
-  --   end,
-  -- },
+  -- code formatting, linting etc
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+    event = "BufWinEnter",
+    after = "nvim-lspconfig",
+    module = "null-ls",
+    config = function()
+      require "custom.plugins.null-ls"
+    end,
+  },
 
   -- Dasboard
   ["goolord/alpha-nvim"] = {
