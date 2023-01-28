@@ -74,6 +74,7 @@ return {
   },
   ["williamboman/mason.nvim"] = {
     module = "mason",
+    event ="BufWinEnter",
     cmd = {
       "Mason",
       "MasonInstall",
