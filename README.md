@@ -1,10 +1,10 @@
 # NvChad-config
 
-## Dashboard
+# Dashboard
 
 ![home!](img/dashboard.png)
 
-## Kebutuhan dasar
+# Kebutuhan dasar
 
 1. Install Neovim 8.0+ https://github.com/neovim/neovim/releases/tag/v0.8.1
 2. C++ (windows) Compiler https://www.msys2.org/
@@ -16,7 +16,7 @@
 8. Windows Terminal (Windows) https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-id&gl=id
 9. Powershell (windows) https://apps.microsoft.com/store/detail/powershell/9MZ1SNWT0N5D?hl=en-id&gl=id
 
-## Config Linux (Linux Debian Based)
+# Config Linux (Linux Debian Based)
 
 - Pastikan Akun Sudah Administrator
 
@@ -91,7 +91,7 @@ git clone https://github.com/pojokcodeid/NvChad-config.git ~/.config/nvim/lua/cu
 cp -r ~/.config/nvim/lua/custom/ftplugin/ ~/.config/nvim/ftplugin/
 ```
 
-## Config Windows
+# Config Windows
 
 - Pastikan Sudah menginstall kebutuhan dasar diatas
 
