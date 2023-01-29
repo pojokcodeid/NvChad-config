@@ -181,3 +181,14 @@ npm i -g black
 | 7   | mrjones2014/smart-splits.nvim | https://github.com/mrjones2014/smart-splits.nvim |
 | 8   | stevearc/dressing.nvim        | https://github.com/stevearc/dressing.nvim        |
 | 9   | folke/todo-comments.nvim      | https://github.com/folke/todo-comments.nvim      |
+
+## Install Rush Linux 
+```bash
+sudo apt install curl
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+select 1
+
+source $HOME/.cargo/env
+rustc --version
+```
