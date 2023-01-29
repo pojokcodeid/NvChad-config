@@ -74,7 +74,7 @@ return {
   },
   ["williamboman/mason.nvim"] = {
     module = "mason",
-    event ="BufWinEnter",
+    event = "BufWinEnter",
     cmd = {
       "Mason",
       "MasonInstall",
@@ -373,4 +373,5 @@ return {
       require "custom.plugins.mason_dap"
     end,
   },
+  ["williamboman/nvim-lsp-installer"] = {},
 }
