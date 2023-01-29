@@ -182,7 +182,7 @@ npm i -g black
 | 8   | stevearc/dressing.nvim        | https://github.com/stevearc/dressing.nvim        |
 | 9   | folke/todo-comments.nvim      | https://github.com/folke/todo-comments.nvim      |
 
-## Install Rush Linux
+## Install Rust Linux
 
 ```bash
 sudo apt install curl
