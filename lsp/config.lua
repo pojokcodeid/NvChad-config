@@ -6,7 +6,7 @@ end
 local lspconfig = require "lspconfig"
 
 -- local servers = { "jsonls", "sumneko_lua","html","cssls","tsserver"}
--- local servers = { "vuels" }
+-- local servers = { "vuels", "dartls" }
 local servers = {}
 
 lsp_installer.setup {

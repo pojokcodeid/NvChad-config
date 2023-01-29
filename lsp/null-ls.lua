@@ -3,6 +3,7 @@ if not null_ls_status_ok then
   return
 end
 
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
 local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
@@ -24,6 +25,7 @@ null_ls.setup {
     -- formatting.clang_format,
     -- diagnostics.flake8
     -- diagnostics.eslint_d,
+    formatting.dart_format,
   },
 
   on_attach = function(client, bufnr)
