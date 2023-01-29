@@ -182,7 +182,8 @@ npm i -g black
 | 8   | stevearc/dressing.nvim        | https://github.com/stevearc/dressing.nvim        |
 | 9   | folke/todo-comments.nvim      | https://github.com/folke/todo-comments.nvim      |
 
-## Install Rush Linux 
+## Install Rush Linux
+
 ```bash
 sudo apt install curl
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -192,3 +193,11 @@ select 1
 source $HOME/.cargo/env
 rustc --version
 ```
+
+## Create New Projek rust
+
+```
+cargo new hello_world --bin
+```
+
+regerensi : https://doc.rust-lang.org/cargo/guide/creating-a-new-project.html
