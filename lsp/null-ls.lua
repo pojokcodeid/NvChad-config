@@ -15,17 +15,17 @@ null_ls.setup {
   debug = false,
   sources = {
     -- formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
-    -- formatting.prettier,
-    -- formatting.prettierd,
-    -- formatting.black.with { extra_args = { "--fast" } },
-    formatting.stylua,
-    -- formatting.eslint_d,
-    -- formatting.google_java_format,
-    -- formatting.phpcbf,
-    -- formatting.clang_format,
-    -- diagnostics.flake8
-    -- diagnostics.eslint_d,
-    formatting.dart_format,
+    -- formatting.prettier,  --ini untuk frontend dev (html,css,javascript etc..)
+    -- formatting.black.with { extra_args = { "--fast" } },  -- ini untuk python
+    formatting.stylua, --ini untuk lua
+    -- formatting.eslint_d,  -- ini untuk javascrpt dan typescript
+    -- formatting.google_java_format,  -- ini untuk java
+    -- formatting.phpcbf,  -- ini untuk php
+    -- formatting.clang_format, --ini untuk c++
+    -- diagnostics.flake8  --ini untuk python
+    -- diagnostics.eslint_d,  -- ini untuk javascript
+    -- formatting.dart_format,   -- ini untuk dart
+    -- formatting.rustfmt,  --ini untuk rust
   },
 
   on_attach = function(client, bufnr)
