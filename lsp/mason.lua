@@ -1,28 +1,28 @@
 local servers = {
-  "sumneko_lua",
-  "cssls",
-  "html",
-  "tsserver",
-  "pyright",
-  -- "bashls",
-  "jsonls",
-  -- "yamlls",
-  "jdtls",
-  "emmet_ls",
-  "intelephense",
+    "lua_ls",
+    --"cssls",
+    --"html",
+    --"tsserver",
+    "pyright",
+    -- "bashls",
+    "jsonls",
+    -- "yamlls",
+    --"jdtls",
+    --"emmet_ls",
+    --"intelephense",
 }
 
 local settings = {
-  ui = {
-    border = "none",
-    icons = {
-      package_installed = "◍",
-      package_pending = "◍",
-      package_uninstalled = "◍",
+    ui = {
+        border = "none",
+        icons = {
+            package_installed = "◍",
+            package_pending = "◍",
+            package_uninstalled = "◍",
+        },
     },
-  },
-  log_level = vim.log.levels.INFO,
-  max_concurrent_installers = 4,
+    log_level = vim.log.levels.INFO,
+    max_concurrent_installers = 4,
 }
 
 require("mason").setup(settings)
@@ -42,8 +42,8 @@ local opts = {}
 
 for _, server in pairs(servers) do
   opts = {
-    on_attach = require("custom.lsp.handlers").on_attach,
-    capabilities = require("custom.lsp.handlers").capabilities,
+      on_attach = require("custom.lsp.handlers").on_attach,
+      capabilities = require("custom.lsp.handlers").capabilities,
   }
 
   server = vim.split(server, "@")[1]
