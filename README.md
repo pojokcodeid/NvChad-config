@@ -1,4 +1,5 @@
 # NvChad-config
+untuk pengguna NvChad V2 gunakan config ini : https://github.com/pojokcodeid/NvChad-v2-config
 
 # Dashboard
 
